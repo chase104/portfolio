@@ -1,0 +1,105 @@
+.nav-container{
+  min-height: 10vh;
+  background: linear-gradient(to top, #80abcb, #b7cfe1);
+  display: flex;
+  flex-direction: row;
+}
+.nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0px 4vw;
+
+}
+.home{
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-left: 16vw;
+  width: 10vw;
+  background: linear-gradient(to top, #80abcb, #b7cfe1);
+}
+.home:hover{
+  filter: brightness(94%);
+  cursor: pointer;
+
+}
+.link{
+  width: auto;
+  height: 100%;
+  display: flex;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #80abcb, #b7cfe1);
+}
+.link img {
+  max-width: 5vw;
+  min-width: 50px;
+  max-height: 8vh;
+  transition: 0.25s;
+  margin-right: 8px;
+}
+.link:hover img{
+  transform: rotate(8deg);
+}
+.odd{
+  filter:brightness(98%);
+}
+.odd:hover{
+  filter: brightness(94%);
+  cursor: pointer;
+}
+.even:hover{
+  filter: brightness(94%);
+  cursor: pointer;
+}
+.odd:active{
+  filter: brightness(100%);
+}
+.even:active{
+  filter: brightness(92%);
+}
+.home:active .fa-home{
+  font-size: 40px;
+}
+.fa-home{
+  color: white;
+  font-size: 46px;
+}
+
+
+.link .title{
+  color:  white;
+  font-weight: 700;
+  width: auto;
+}
+
+@media(max-width: 1200px){
+  .home{
+    margin-left: 4vw;
+  }
+  .cardd{
+    width: auto;
+    max-width: 600px;
+    align-items: flex-start;
+  }
+  .cardd:hover{
+    height: 700px;
+    min-width: 400px;
+    transition: 0.5s;
+  }
+  .cardd:hover img{
+    left:65%;
+    height: 350px;
+
+  }
+  .cardd .content{
+    width: 100%;
+    left: 0;
+    padding: 40px;
+  }
+}
