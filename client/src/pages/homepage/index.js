@@ -1,0 +1,284 @@
+import React, { useState } from 'react'
+import './styles.css'
+import { Link } from 'react-router-dom'
+
+import hello from './hello.png'
+import react from './react_sticker.png'
+import mongo from './mongo_sticker.png'
+import express from './express_sticker.png'
+
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FacebookIcon from '@material-ui/icons/Facebook';
+
+import {NavigateNext} from '@material-ui/icons/';
+
+
+const Homepage = () => {
+  const [aboutTab, setAboutTab] = useState(true);
+  const [activeApp, setActiveApp] = useState(null);
+  const [lastActive, setLastActive] = useState(null)
+  const [imageClass, setImageClass] = useState(null);
+  const [specsActive, setSpecsActive] = useState(null);
+  const [siteOne, setSiteOne] = useState({
+    functionality: ["Search movie titles", "See recommended movies", "Search by category, year, and/or IMBD score", 'Add movies to "favorites" or "watch later" lists',
+   "See where a specific movie can be streamed with subscription"],
+   base: ["MongoDB", "Express", "React", "Node"],
+   utility:["axios", "passport", "express-session", "Material-ui", "Postgres-Database", "Heroku", "Mongoose", "PDF-creation", "automated emails"]
+  })
+  const [siteTwo, setSiteTwo] = useState({
+    functionality: ["Create account", "Upload photos", "Swipe left or right on other users", "Chat with other users" ],
+   base: ["MongoDB", "Express", "React", "Node"],
+   utility:["axios", "passport", "express-session", "Material-ui", "Postgres-Database", "Heroku", "Mongoose", "PDF-creation", "automated emails"]
+  })
+  const [siteThree, setSiteThree] = useState({
+    functionality: ["Complete account application process", "Edit schedule / availability", "Search through responsive site", "Submit questions or applications"],
+   base: ["MongoDB", "Express", "React", "Node"],
+   utility:["axios", "passport", "express-session", "Material-ui", "Postgres-Database", "Heroku", "Mongoose", "PDF-creation", "automated emails"]
+  })
+
+  const handleTabsClick = (e) => {
+    console.log(e.target.id);
+    console.log(activeApp);
+    if (e.target.id == "about-tab") {
+      setAboutTab(true)
+    } else {
+      setAboutTab(false)
+    }
+  }
+  const handleAppClick = (app) => {
+    if (activeApp == null) {
+      setActiveApp(app)
+      setLastActive(app)
+      setImageClass(`image-${app}`)
+    } else {
+      setActiveApp(null);
+      setSpecsActive(null)
+    }
+  }
+  const handleSpecsClick = () => {
+    if (specsActive == null){
+      setSpecsActive(true)
+    } else {
+      setSpecsActive(null)
+    }
+  }
+  const returnClass = () => {
+    if (activeApp != null) {
+          return "display-side"
+    }
+  }
+  const returnButtonClass = () => {
+    if (activeApp != null) {
+          return "display-buttons"
+    }
+  }
+  const returnImageClass = () => {
+    if (activeApp == "site-one"){
+      return "image-one"
+    } else if (activeApp == "site-two"){
+      return "image-two"
+    } else if (activeApp == "site-three"){
+      return "image-three"
+    }
+  }
+  const imageHref = (tag) => {
+    let href
+    if (tag == "app"){
+      switch(activeApp){
+        case "site-one": href = "https://stream-simply.herokuapp.com/"
+        break;
+        case "site-two": href = "https://class-connect1.herokuapp.com/"
+        break;
+        case "site-three": href = "https://class-connect1.herokuapp.com/"
+        break;
+      }
+    } else {
+      switch(activeApp){
+        case "site-one": href = "https://github.com/chase104/stream_simply"
+        break;
+        case "site-two": href = "https://github.com/chase104/tinder-clone"
+        break;
+        case "site-three": href = "https://github.com/chase104/class-connect"
+        break;
+      }
+    }
+    console.log(href);
+    return href
+  }
+
+  const returnFunctionality = () => {
+    let type
+    console.log(activeApp);
+    console.log(lastActive);
+    if (activeApp != null) {
+      switch(activeApp) {
+        case "site-one": type = siteOne.functionality
+        break;
+        case "site-two": type = siteTwo.functionality
+        break;
+        case "site-three": type = siteThree.functionality
+        break;
+      }
+    } else {
+      switch(lastActive) {
+        case "site-one": type = siteOne.functionality
+        break;
+        case "site-two": type = siteTwo.functionality
+        break;
+        case "site-three": type = siteThree.functionality
+        break;
+      }
+    }
+
+    console.log(type);
+     if (type!= undefined) {
+       let html = (<div className="functionality-contents">
+       {type.map((item) => {
+               return <div className="item">
+                 <NavigateNext />
+                 <div>{item}</div>
+                 </div>
+           })}
+       </div>)
+      return html
+    }
+
+  }
+
+  return (
+    <div className="homepage-container">
+      <div className="top-half">
+        top
+      </div>
+      <div className="content-container">
+        <div className="content">
+          <div className="tabs no-select">
+            <div className={aboutTab ? "about-tab tab-on" : "about-tab"} id="about-tab" onClick={(e) => handleTabsClick(e)}>ABOUT</div>
+            <div className={!aboutTab ? "apps-tab tab-on" : "apps-tab"} id="apps-tab" onClick={(e) => handleTabsClick(e)}>APPS</div>
+          </div>
+          <div className="overflow-hider">
+            <div className={`about-content ${aboutTab ? null : "shift-about"}`}>
+            <div className="image-container">
+            </div>
+            <div className="information-container">
+              <div className="introduction">
+                <div className="hello">
+                  <img src={hello}/>
+                </div>
+                <div className="name-phrase">
+                  <div className="im">I'm</div>
+                  <div className="name">
+                    <div className="first">Chase</div>
+                    <div className="second">Van Halen</div>
+                  </div>
+                </div>
+                <div className="title">Full-Stack Web Developer (junior)</div>
+              </div>
+              <div className="information">
+                <div className="column-one">
+                  <div >Age</div>
+                  <div>Location</div>
+                  <div>Email</div>
+                  <div>Phone</div>
+                  <div className="answer-bubble no-select">
+                    <div className="relocate">Can Relocate</div>
+                    <div className="message">I'm open to moving to most states to join your company</div>
+                  </div>
+                  <div className="answer-bubble no-select" style={{marginBottom: "8px"}}>
+                    <div className="relocate">Job Ready</div>
+                    <div className="message">I'm capable of deloping both front and back end</div>
+                  </div>
+                  </div>
+                <div className="column-two">
+                  <div className="answers">
+                    <div>25</div>
+                    <div>Greenfield, IN</div>
+                    <div>chase.vanhalen88@gmail.com</div>
+                    <div>+34 644 833 258</div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+            <div className={`apps-content ${aboutTab ? null : "shift-apps"}`}>
+              <div className="site-info">
+                <div className={`dropdown-container ${specsActive != null ? activeApp != null ? "dropdown-active": null : null}`}>
+                  <div className="dropdown">
+                    <div className="row-title">
+                      <div style={{marginRight: "8px"}}>Functionality</div>
+                    </div>
+                    {returnFunctionality()}
+                    <div className="row-title">
+                      <div style={{marginRight: "8px"}}>Utility Technologies</div>
+                    </div>
+                    <div className="utility-contents">
+                    {siteOne.utility.map((item) => (
+                      <div className="item">
+                      <div>{item}</div>
+                      </div>
+                    ))}
+                    </div>
+                  </div>
+                </div>
+                <div className={`site-side ${returnClass()}`}>
+                  <div className="site-upper">
+                    <img src={react} className="sticker"/>
+                    <img src={mongo} className="sticker"/>
+                    <img src={express} className="sticker"/>
+                  </div>
+                  <a href={`${imageHref("app")}`} target="_" className={`site-image ${imageClass}`}></a>
+                </div>
+                <div className={`site-buttons ${returnButtonClass()}`}>
+                  <a href={`${imageHref("app")}`} target='_' className="site-button no-select no-decoration">GO TO APP</a>
+                  <div className="site-button no-select" onClick={() => handleSpecsClick()}>SPECS</div>
+                  <a href={`${imageHref()}`} target='_'  className="site-button no-select no-decoration">GITHUB</a>
+                </div>
+              </div>
+              <div className={`site site-one ${activeApp == "site-one" ? "active-container" : activeApp == null ? null : "hide-app"}`} id="site-one" onClick={(e) => handleAppClick("site-one")}>
+                <div className={`site-inner ${activeApp == "site-one" ? "active-one" : null}`}>
+                  <div className="site-title no-select">Stream Simply</div>
+                  <div className="site-img"></div>
+                </div>
+              </div>
+              <div className={`site site-two ${activeApp == "site-two" ? "active-container" : activeApp == null ? null : "hide-app"}`} id="site-two" onClick={(e) => handleAppClick("site-two")}>
+                <div className={`site-inner ${activeApp == "site-two" ? "active-two" : null}`}>
+                  <div className="site-title no-select">Find Me</div>
+                  <div className="site-img"></div>
+                </div>
+              </div>
+              <div className={`site site-three ${activeApp == "site-three" ? "active-three" :  activeApp == null ? null : "hide-app"}`} id="site-three" onClick={(e) => handleAppClick("site-three")}>
+                <div className={`site-inner ${activeApp == "site-three" ? "active-three" : null}`}>
+                  <div className="site-title no-select">The Adventurer's College</div>
+                  <div className="site-img"></div>
+                </div>
+              </div>
+            </div>
+            <div className="bottom-bar">
+              <div className="icon-container">
+                <a href="https://github.com/chase104?tab=repositories" target="_" className="bottom-icon no-decoration">
+                  <GitHubIcon></GitHubIcon>
+                </a>
+                <a href="https://www.linkedin.com/in/chase-van-halen-8068a5108/" target="_" className="bottom-icon no-decoration">
+                  <LinkedInIcon></LinkedInIcon>
+                </a>
+                <a href="https://www.facebook.com/chase.vanhalen/" target="_" className="bottom-icon no-decoration">
+                  <FacebookIcon></FacebookIcon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bottom-half">
+        <div className="download-button no-select no-decoration">
+          Download CV
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Homepage

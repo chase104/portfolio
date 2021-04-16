@@ -18,6 +18,8 @@ const Navbar = (props) => {
         <div className="link odd no-select" >
           <img src={findme} />
           <div className="title  ">Find Me</div>
+          <div className="tag">app</div>
+
         </div>
 
 
@@ -25,11 +27,14 @@ const Navbar = (props) => {
         <div className="link even no-select" >
           <img src={film} />
           <div className="title">Stream Simply</div>
+          <div className="tag">app</div>
         </div>
 
         <div className="link odd no-select" >
-        <img src={sword} />
-        <div className="title">Adventurer's College</div>
+          <img src={sword} />
+          <div className="title">Adventurer's College</div>
+          <div className="tag">app</div>
+
         </div>
         <div className="link even no-select">
           <img src={github} />

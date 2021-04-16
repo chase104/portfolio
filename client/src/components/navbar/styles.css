@@ -1,6 +1,6 @@
 .nav-container{
   min-height: 10vh;
-  background: linear-gradient(to top, #80abcb, #b7cfe1);
+  background: white;
   display: flex;
   flex-direction: row;
 }
@@ -20,7 +20,7 @@
   height: 100%;
   margin-left: 16vw;
   width: 10vw;
-  background: linear-gradient(to top, #80abcb, #b7cfe1);
+  background: white
 }
 .home:hover{
   filter: brightness(94%);
@@ -31,10 +31,11 @@
   width: auto;
   height: 100%;
   display: flex;
-  padding: 0px 8px;
+  padding: 0px 2vw;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #80abcb, #b7cfe1);
+  background: white;
+  position: relative;
 }
 .link img {
   max-width: 5vw;
@@ -76,6 +77,21 @@
   color:  white;
   font-weight: 700;
   width: auto;
+}
+.tag{
+  position: absolute;
+    height: 20px;
+    right: 20px;
+    bottom: -26px;
+    padding: 4px 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #345e7f;
+    color: white;
+    font-weight: 600;
+}
+.link:hover .tag{
+  filter: brightness(130%);
 }
 
 @media(max-width: 1200px){
