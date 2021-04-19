@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import hello from './hello.png'
 import react from './react_sticker.png'
 import mongo from './mongo_sticker.png'
+import postgres from './postgres_sticker.png'
 import express from './express_sticker.png'
 
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -23,13 +24,13 @@ const Homepage = () => {
   const [siteOne, setSiteOne] = useState({
     functionality: ["Search movie titles", "See recommended movies", "Search by category, year, and/or IMBD score", 'Add movies to "favorites" or "watch later" lists',
    "See where a specific movie can be streamed with subscription"],
-   base: ["MongoDB", "Express", "React", "Node"],
-   utility:["axios", "passport", "express-session", "Material-ui", "Postgres-Database", "Heroku", "Mongoose", "PDF-creation", "automated emails"]
+   base: ["Postgres", "Express", "React", "Node"],
+   utility:["axios", "passport", "express-session", "Material-ui", "Postgres-Database", "Heroku", "bcrypt", "pg"]
   })
   const [siteTwo, setSiteTwo] = useState({
     functionality: ["Create account", "Upload photos", "Swipe left or right on other users", "Chat with other users" ],
    base: ["MongoDB", "Express", "React", "Node"],
-   utility:["axios", "passport", "express-session", "Material-ui", "Postgres-Database", "Heroku", "Mongoose", "PDF-creation", "automated emails"]
+   utility:["axios", "passport", "express-session", "Material-ui", "Heroku", "Mongoose", "express-fileupload", "react-tinder-card"]
   })
   const [siteThree, setSiteThree] = useState({
     functionality: ["Complete account application process", "Edit schedule / availability", "Search through responsive site", "Submit questions or applications"],
@@ -130,7 +131,6 @@ const Homepage = () => {
         break;
       }
     }
-
     console.log(type);
      if (type!= undefined) {
        let html = (<div className="functionality-contents">
@@ -143,9 +143,41 @@ const Homepage = () => {
        </div>)
       return html
     }
-
   }
 
+  const returnUtility = () => {
+    let type
+        if (activeApp != null) {
+      switch(activeApp) {
+        case "site-one": type = siteOne.utility
+        break;
+        case "site-two": type = siteTwo.utility
+        break;
+        case "site-three": type = siteThree.utility
+        break;
+      }
+    } else {
+      switch(lastActive) {
+        case "site-one": type = siteOne.utility
+        break;
+        case "site-two": type = siteTwo.utility
+        break;
+        case "site-three": type = siteThree.utility
+        break;
+      }
+    }
+    if (type!= undefined) {
+      let html = (<div className="utility-contents">
+      {type.map((item) => {
+              return <div className="item">
+              <div>{item}</div>
+              </div>
+          })}
+      </div>)
+     return html
+   }
+
+  }
   return (
     <div className="homepage-container">
       <div className="top-half">
@@ -178,7 +210,7 @@ const Homepage = () => {
               <div className="information">
                 <div className="column-one">
                   <div >Age</div>
-                  <div>Location</div>
+                  <div>Hometown</div>
                   <div>Email</div>
                   <div>Phone</div>
                   <div className="answer-bubble no-select">
@@ -214,25 +246,34 @@ const Homepage = () => {
                     <div className="row-title">
                       <div style={{marginRight: "8px"}}>Utility Technologies</div>
                     </div>
-                    <div className="utility-contents">
-                    {siteOne.utility.map((item) => (
-                      <div className="item">
-                      <div>{item}</div>
-                      </div>
-                    ))}
-                    </div>
+                    {returnUtility()}
                   </div>
                 </div>
                 <div className={`site-side ${returnClass()}`}>
-                  <div className="site-upper">
+                  {
+                    activeApp == "site-one" || lastActive == "site-one" ?
+                    <div className="site-upper">
                     <img src={react} className="sticker"/>
-                    <img src={mongo} className="sticker"/>
+                    <img src={postgres} className="sticker"/>
                     <img src={express} className="sticker"/>
                   </div>
-                  <a href={`${imageHref("app")}`} target="_" className={`site-image ${imageClass}`}></a>
+                  :
+                  <div className="site-upper">
+                  <img src={react} className="sticker"/>
+                  <img src={mongo} className="sticker"/>
+                  <img src={express} className="sticker"/>
+                </div>
+                  }
+
+                  <a href={`${imageHref("app")}`} target="_" className={`site-image ${imageClass}`}>
+                  <div className="load-times">*Initial site load time due to development server hosting</div>
+                  </a>
+                  
                 </div>
                 <div className={`site-buttons ${returnButtonClass()}`}>
-                  <a href={`${imageHref("app")}`} target='_' className="site-button no-select no-decoration">GO TO APP</a>
+                  <a href={`${imageHref("app")}`} target='_' className="site-button no-select no-decoration">GO TO APP
+                  <div className="load-times button-load-times">*Initial site load time due to development server hosting</div>
+                  </a>
                   <div className="site-button no-select" onClick={() => handleSpecsClick()}>SPECS</div>
                   <a href={`${imageHref()}`} target='_'  className="site-button no-select no-decoration">GITHUB</a>
                 </div>
@@ -273,9 +314,9 @@ const Homepage = () => {
         </div>
       </div>
       <div className="bottom-half">
-        <div className="download-button no-select no-decoration">
+        <a href="/pdf" target="_" className="download-button no-select no-decoration">
           Download CV
-        </div>
+        </a>
       </div>
     </div>
   )
