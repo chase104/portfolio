@@ -89,7 +89,7 @@ const Homepage = () => {
       switch(activeApp){
         case "site-one": href = "https://stream-simply.herokuapp.com/"
         break;
-        case "site-two": href = "https://class-connect1.herokuapp.com/"
+        case "site-two": href = "https://tinder-backend-chase.herokuapp.com/login"
         break;
         case "site-three": href = "https://class-connect1.herokuapp.com/"
         break;
