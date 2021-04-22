@@ -14,8 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Route exact path="/" component={Home} />
-        <Route path="/homepage" component={Homepage} />
+        <Route exact path="/" component={Homepage} />
         <Route path="/pdf" component={pdfPage} />
       </div>
 
