@@ -309,14 +309,17 @@ const Homepage = () => {
                   <FacebookIcon></FacebookIcon>
                 </a>
               </div>
+
             </div>
+            <a href="/pdf" target="_" className="download-button no-select no-decoration">
+          Download CV
+             </a>
+             <div className="filler-div"></div>
           </div>
         </div>
       </div>
       <div className="bottom-half">
-        <a href="/pdf" target="_" className="download-button no-select no-decoration">
-          Download CV
-        </a>
+
       </div>
     </div>
   )
