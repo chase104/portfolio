@@ -672,6 +672,9 @@
   .hello {
     margin-top: 8px;
   }
+  .active-three .site-title {
+    font-size: 10px;
+  }
   .active-container {
     left: 13% !important;
     top: 7% !important;

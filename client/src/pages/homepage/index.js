@@ -280,7 +280,10 @@ const Homepage = () => {
               </div>
               <div className={`site site-one ${activeApp == "site-one" ? "active-container" : activeApp == null ? null : "hide-app"}`} id="site-one" onClick={(e) => handleAppClick("site-one")}>
                 <div className={`site-inner ${activeApp == "site-one" ? "active-one" : null}`}>
-                  <div className="site-title no-select">Stream Simply</div>
+                  <div className="site-title no-select">
+                    <div>Stream</div>
+                    <div>Simply</div>
+                  </div>
                   <div className="site-img"></div>
                 </div>
               </div>
