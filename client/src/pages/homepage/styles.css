@@ -416,11 +416,12 @@
   background: #4da6ff;
   border-top: 10px solid #1a8cff;
 }
-.item {
-  font-size: 1em !important;
-}
 .functionality-contents {
   color: white;
+}
+.item {
+  font-size: 1em;
+  margin-right: 4px;
 }
 .foundation-contents {
   display: flex;
@@ -607,7 +608,7 @@
   .utility-contents {
     font-size: 14px;
     max-height: 30%;
-    margin-left: 4px;
+    margin-left: 16px;
     min-height: null;
   }
   .site-title {
@@ -669,6 +670,9 @@
   }
 }
 @media (max-width: 700px) {
+  .site-one-functionality {
+    font-size: 0.8em !important;
+  }
   .hello {
     margin-top: 8px;
   }

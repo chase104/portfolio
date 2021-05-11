@@ -132,8 +132,8 @@ const Homepage = () => {
       }
     }
     console.log(type);
-     if (type!= undefined) {
-       let html = (<div className="functionality-contents">
+     if (type!= undefined) { 
+       let html = (<div className={`functionality-contents ${activeApp == "site-one" ? "site-one-functionality" : null}`}>
        {type.map((item) => {
                return <div className="item">
                  <NavigateNext />
