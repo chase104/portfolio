@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   background: url(background.png);
-  background-size: cover;
+  background-size: auto;
   background-position-y: -40px;
 }
 .content-container {
@@ -88,7 +88,7 @@
   background-position: center !important;
 }
 .site-one .site-img {
-  background: url(popcorn.png);
+  background: url(movie-icon.png);
 }
 .site-two .site-img {
   background: url(find_me_logo.png);
@@ -114,8 +114,10 @@
   letter-spacing: 3px;
 }
 .site-one {
+  width: 25%;
   margin-left: 5%;
 }
+
 .site-two {
   margin-left: 35%;
 }
@@ -569,6 +571,9 @@
   }
 }
 @media (max-width: 950px) {
+  .tabs {
+    width: 70%;
+  }
   .top-half {
     min-height: 60vh;
   }
@@ -662,12 +667,52 @@
   }
 }
 @media (max-width: 700px) {
+  .active-container {
+    left: 13% !important;
+    width: 30% !important;
+    flex-direction: column !important;
+    margin-left: 5% !important;
+  }
+  .active-container .site-inner {
+    flex-direction: column !important;
+  }
+  .site {
+    top: 2%;
+    left: 50%;
+    margin-left: 0px;
+    transform: translateX(-50%);
+    max-height: 30%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+  }
+  .site-inner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .site-one .site-img {
+    width: 50%;
+  }
+  .site-two {
+    top: 34.5%;
+  }
+  .site-three {
+    top: 67%;
+  }
   .top-half {
     min-height: 70vh;
+  }
+  .tabs {
+    width: 80%;
   }
 }
 
 @media (max-width: 500px) {
+  .tabs {
+    width: 90%;
+  }
   .top-half {
     min-height: 80vh;
   }

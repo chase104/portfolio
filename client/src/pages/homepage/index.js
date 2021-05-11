@@ -181,7 +181,7 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <div className="top-half">
-        top
+        
       </div>
       <div className="content-container">
         <div className="content">
