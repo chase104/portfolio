@@ -623,7 +623,7 @@
   }
   .about-content {
     height: fit-content;
-    width: 80vw;
+    width: 100%;
   }
   .information-container {
     height: fit-content;
