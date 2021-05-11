@@ -290,7 +290,7 @@ const Homepage = () => {
                   <div className="site-img"></div>
                 </div>
               </div>
-              <div className={`site site-three ${activeApp == "site-three" ? "active-three" :  activeApp == null ? null : "hide-app"}`} id="site-three" onClick={(e) => handleAppClick("site-three")}>
+              <div className={`site site-three ${activeApp == "site-three" ? "active-container" :  activeApp == null ? null : "hide-app"}`} id="site-three" onClick={(e) => handleAppClick("site-three")}>
                 <div className={`site-inner ${activeApp == "site-three" ? "active-three" : null}`}>
                   <div className="site-title no-select">The Adventurer's College</div>
                   <div className="site-img"></div>
@@ -311,7 +311,7 @@ const Homepage = () => {
               </div>
 
             </div>
-            <a href="/pdf" target="_" className="download-button no-select no-decoration">
+            <a href="https://drive.google.com/file/d/1MVfIhdABhzIaxk71oVSRsjioluKC0DT2/view?usp=sharing" target="_" className="download-button no-select no-decoration">
           Download CV
              </a>
              <div className="filler-div"></div>
