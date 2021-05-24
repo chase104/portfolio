@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import './styles.css'
 import { Link } from 'react-router-dom'
 
-import hello from './hello.png'
-import react from './react_sticker.png'
-import mongo from './mongo_sticker.png'
-import postgres from './postgres_sticker.png'
-import express from './express_sticker.png'
+import hello from './images/hello.png'
+import react from './images/react_sticker.png'
+import mongo from './images/mongo_sticker.png'
+import postgres from './images/postgres_sticker.png'
+import express from './images/express_sticker.png'
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -293,7 +293,7 @@ const Homepage = () => {
                   <div className="site-img"></div>
                 </div>
               </div>
-              <div className={`site site-three ${activeApp == "site-three" ? "active-container" :  activeApp == null ? null : "hide-app"}`} id="site-three" onClick={(e) => handleAppClick("site-three")}>
+              <div className={`site site-three ${activeApp == "site-three" ? "active-container active-three" :  activeApp == null ? null : "hide-app"}`} id="site-three" onClick={(e) => handleAppClick("site-three")}>
                 <div className={`site-inner ${activeApp == "site-three" ? "active-three" : null}`}>
                   <div className="site-title no-select">The Adventurer's College</div>
                   <div className="site-img"></div>

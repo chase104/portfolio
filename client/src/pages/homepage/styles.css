@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(background.png);
+  background: url(./images/background.png);
   background-size: auto;
   background-position-y: -40px;
 }
@@ -88,13 +88,13 @@
   background-position: center !important;
 }
 .site-one .site-img {
-  background: url(movie-icon.png);
+  background: url(./images/movie-icon.png);
 }
 .site-two .site-img {
-  background: url(find_me_logo.png);
+  background: url(./images/find_me_logo.png);
 }
 .site-three .site-img {
-  background: url(sword.png);
+  background: url(./images/sword.png);
 }
 .site-inner:hover {
   cursor: pointer;
@@ -139,8 +139,8 @@
   top: 3%;
 }
 .active-three {
-  margin-left: 3%;
   top: 3%;
+  margin-left: 3%;
 }
 
 .site-title {
@@ -224,7 +224,7 @@
   margin-bottom: 10%;
   min-width: 30%;
   width: 40%;
-  background: url(pic_2.png);
+  background: url(./images/pic_2.png);
   margin-left: 20px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -474,13 +474,13 @@
 }
 
 .image-site-one {
-  background: url(steam-preview.jpg);
+  background: url(./images/steam-preview.jpg);
 }
 .image-site-two {
-  background: url(findme-preview.jpg);
+  background: url(./images/findme-preview.jpg);
 }
 .image-site-three {
-  background: url(adventurecollege-preview.jpg);
+  background: url(./images/adventurecollege-preview.jpg);
 }
 .sticker {
   border-radius: 5px;
@@ -684,7 +684,7 @@
     top: 7% !important;
     width: 30% !important;
     flex-direction: column !important;
-    margin-left: 5% !important;
+    margin-left: 3% !important;
   }
   .active-container .site-inner {
     flex-direction: column !important;
