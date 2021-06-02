@@ -314,7 +314,7 @@ const Homepage = () => {
               </div>
 
             </div>
-            <a href="https://drive.google.com/file/d/1MVfIhdABhzIaxk71oVSRsjioluKC0DT2/view?usp=sharing" target="_" className="download-button no-select no-decoration">
+            <a href="https://drive.google.com/file/d/1iWXdXGsdUwWMHMXoAtahzKyGbtkyfPcC/view?usp=sharing" target="_" className="download-button no-select no-decoration">
           Download CV
              </a>
              <div className="filler-div"></div>
