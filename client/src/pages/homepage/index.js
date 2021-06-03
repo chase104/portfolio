@@ -308,9 +308,6 @@ const Homepage = () => {
                 <a href="https://www.linkedin.com/in/chase-van-halen-8068a5108/" target="_" className="bottom-icon no-decoration">
                   <LinkedInIcon></LinkedInIcon>
                 </a>
-                <a href="https://www.facebook.com/chase.vanhalen/" target="_" className="bottom-icon no-decoration">
-                  <FacebookIcon></FacebookIcon>
-                </a>
               </div>
 
             </div>
