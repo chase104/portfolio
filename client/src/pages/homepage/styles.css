@@ -442,14 +442,27 @@
   margin-left: 20px;
   flex-wrap: wrap;
 }
+.image-holder {
+  height: 60%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 .site-image {
+  position: absolute;
   display: flex;
   justify-content: center;
+  margin-left: 100vw;
   width: 90%;
   height: 50%;
   background-size: contain !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+}
+.active-image {
+  margin-left: 0vw !important;
 }
 .load-times {
   position: absolute;

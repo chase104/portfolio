@@ -19,7 +19,11 @@ const Homepage = () => {
   const [aboutTab, setAboutTab] = useState(true);
   const [activeApp, setActiveApp] = useState(null);
   const [lastActive, setLastActive] = useState(null)
-  const [imageClass, setImageClass] = useState(null);
+
+  const [imageClassOne, setOne] = useState("");
+  const [imageClassTwo, setTwo] = useState("");
+  const [imageClassThree, setThree] = useState("");
+
   const [specsActive, setSpecsActive] = useState(null);
   const [siteOne, setSiteOne] = useState({
     functionality: ["Search movie titles", "See recommended movies", "Search by category, year, and/or IMBD score", 'Add movies to "favorites" or "watch later" lists',
@@ -51,7 +55,21 @@ const Homepage = () => {
     if (activeApp == null) {
       setActiveApp(app)
       setLastActive(app)
-      setImageClass(`image-${app}`)
+      console.log(app)
+      //set image css so only correct image is in frame
+      if (app == "site-one"){
+        setOne('active-image')
+        setTwo('')
+        setThree('')
+      } else if (app == "site-two"){
+        setOne('')
+        setTwo('active-image')
+        setThree('')
+      } else if (app == "site-three"){
+        setOne('')
+        setTwo('')
+        setThree('active-image')
+      }
     } else {
       setActiveApp(null);
       setSpecsActive(null)
@@ -264,11 +282,17 @@ const Homepage = () => {
                   <img src={express} className="sticker"/>
                 </div>
                   }
-
-                  <a href={`${imageHref("app")}`} target="_" className={`site-image ${imageClass}`}>
-                  <div className="load-times">*Initial site load time due to development server hosting</div>
-                  </a>
-                  
+                  <div className="image-holder">
+                    <a href={`${imageHref("app")}`} target="_" className={`site-image image-site-one ${imageClassOne}`}>
+                    <div className="load-times">*Initial site load time due to development server hosting</div>
+                    </a>
+                    <a href={`${imageHref("app")}`} target="_" className={`site-image image-site-two ${imageClassTwo}`}>
+                    <div className="load-times">*Initial site load time due to development server hosting</div>
+                    </a>
+                    <a href={`${imageHref("app")}`} target="_" className={`site-image image-site-three ${imageClassThree}`}>
+                    <div className="load-times">*Initial site load time due to development server hosting</div>
+                    </a>
+                  </div>  
                 </div>
                 <div className={`site-buttons ${returnButtonClass()}`}>
                   <a href={`${imageHref("app")}`} target='_' className="site-button no-select no-decoration">GO TO APP
