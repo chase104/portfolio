@@ -311,12 +311,7 @@ const Homepage = () => {
                   <div className="site-img"></div>
                 </div>
               </div>
-              <div className={`site site-two ${activeApp == "site-two" ? "active-container" : activeApp == null ? null : "hide-app"}`} id="site-two" onClick={(e) => handleAppClick("site-two")}>
-                <div className={`site-inner ${activeApp == "site-two" ? "active-two" : null}`}>
-                  <div className="site-title no-select">Find Me</div>
-                  <div className="site-img"></div>
-                </div>
-              </div>
+
               <div className={`site site-three ${activeApp == "site-three" ? "active-container active-three" :  activeApp == null ? null : "hide-app"}`} id="site-three" onClick={(e) => handleAppClick("site-three")}>
                 <div className={`site-inner ${activeApp == "site-three" ? "active-three" : null}`}>
                   <div className="site-title no-select">The Adventurer's College</div>

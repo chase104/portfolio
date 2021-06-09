@@ -115,7 +115,7 @@
 }
 .site-one {
   width: 25%;
-  margin-left: 5%;
+  margin-left: 17%;
 }
 
 .site-two {
@@ -124,7 +124,7 @@
 
 .site-three {
   width: 30%;
-  margin-left: 65%;
+  margin-left: 55%;
 }
 .hide-app {
   margin-top: 140%;
@@ -693,7 +693,7 @@
     font-size: 10px;
   }
   .active-container {
-    left: 13% !important;
+    left: 16% !important;
     top: 7% !important;
     width: 30% !important;
     flex-direction: column !important;
@@ -703,7 +703,7 @@
     flex-direction: column !important;
   }
   .site {
-    top: 2%;
+    top: 15%;
     left: 50%;
     margin-left: 0px;
     transform: translateX(-50%);
@@ -726,7 +726,7 @@
     top: 34.5%;
   }
   .site-three {
-    top: 67%;
+    top: 54%;
   }
   .top-half {
     min-height: 70vh;
