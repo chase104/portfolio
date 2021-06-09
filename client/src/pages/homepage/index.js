@@ -205,7 +205,7 @@ const Homepage = () => {
         <div className="content">
           <div className="tabs no-select">
             <div className={aboutTab ? "about-tab tab-on" : "about-tab"} id="about-tab" onClick={(e) => handleTabsClick(e)}>ABOUT</div>
-            <div className={!aboutTab ? "apps-tab tab-on" : "apps-tab"} id="apps-tab" onClick={(e) => handleTabsClick(e)}>APPS</div>
+            <div className={!aboutTab ? "apps-tab tab-on" : "apps-tab"} id="apps-tab" onClick={(e) => handleTabsClick(e)}>MY APPS</div>
           </div>
           <div className="overflow-hider">
             <div className={`about-content ${aboutTab ? null : "shift-about"}`}>

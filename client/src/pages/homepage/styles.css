@@ -420,8 +420,12 @@
   color: white;
 }
 .item {
+  display: flex;
   font-size: 1em;
   margin-right: 4px;
+}
+.item div {
+  text-align: left;
 }
 .foundation-contents {
   display: flex;
