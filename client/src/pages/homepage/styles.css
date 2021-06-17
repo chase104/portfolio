@@ -595,7 +595,7 @@
     width: 70%;
   }
   .top-half {
-    min-height: 60vh;
+    min-height: 600px;
   }
   .filler-div {
     position: absolute;
@@ -733,7 +733,7 @@
     top: 54%;
   }
   .top-half {
-    min-height: 70vh;
+    min-height: 600px;
   }
   .tabs {
     width: 80%;
@@ -745,7 +745,7 @@
     width: 90%;
   }
   .top-half {
-    min-height: 80vh;
+    min-height: 500px;
   }
   .bottom-half {
     min-height: 80vh;
