@@ -441,7 +441,7 @@
   justify-content: sp;
   font-size: 20px;
   max-height: 40%;
-  min-height: 400px;
+  min-height: 200px;
   align-items: flex-start;
   margin-left: 20px;
   flex-wrap: wrap;
@@ -470,6 +470,8 @@
 }
 .load-times {
   position: absolute;
+  z-index: 5;
+  border: 1px solid black;
   background: #1a8cff;
   top: 82%;
   width: 50%;
