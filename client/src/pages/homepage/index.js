@@ -228,7 +228,7 @@ const Homepage = () => {
               <div className="information">
                 <div className="column-one">
                   <div >Age</div>
-                  <div>Hometown</div>
+                  <div>Location</div>
                   <div>Email</div>
                   <div>Phone</div>
                   <div className="answer-bubble no-select">
@@ -242,11 +242,10 @@ const Homepage = () => {
                   </div>
                 <div className="column-two">
                   <div className="answers">
-                    <div>25</div>
-                    <div>Greenfield, IN</div>
+                    <div>26</div>
+                    <div>Houston, TX</div>
                     <div>chase.vanhalen88@gmail.com</div>
-                    <div>+34 644 833 258</div>
-
+                    <div>+1 317-480-6992</div>
                   </div>
                 </div>
               </div>
