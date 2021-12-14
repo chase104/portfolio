@@ -48,7 +48,7 @@
 
 .apps-content {
   display: flex;
-  width: 100%;
+  min-width: 60vw;
   height: auto;
   justify-content: flex-start;
   align-items: flex-start;
@@ -150,10 +150,10 @@
   transition: 0.15s;
 }
 .shift-about {
-  margin-left: -100%;
+  margin-left: -102%;
 }
 .shift-apps {
-  margin-left: 0px;
+  margin-left: -4px;
 }
 .bottom-half {
   min-height: 50vh;
