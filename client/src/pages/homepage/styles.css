@@ -591,6 +591,9 @@
   }
 }
 @media (max-width: 950px) {
+  .apps-content{
+    min-width: 80vw;
+  }
   .tabs {
     width: 70%;
   }
@@ -751,7 +754,7 @@
     min-height: 80vh;
   }
   .shift-about {
-    margin-left: -80vw;
+    margin-left: -84vw;
   }
   .column-one div {
     font-size: 14px;
