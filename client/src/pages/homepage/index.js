@@ -329,7 +329,7 @@ const Homepage = () => {
               </div>
 
             </div>
-            <a href="https://drive.google.com/file/d/1iWXdXGsdUwWMHMXoAtahzKyGbtkyfPcC/view?usp=sharing" target="_" className="download-button no-select no-decoration">
+            <a href="https://docs.google.com/document/d/1tZMnRd4Kw5kS-U9jHRSON2SjnB1k7ny4/edit?usp=sharing&ouid=115538098538292968969&rtpof=true&sd=true" target="_" className="download-button no-select no-decoration">
           Download CV
              </a>
              <div className="filler-div"></div>
