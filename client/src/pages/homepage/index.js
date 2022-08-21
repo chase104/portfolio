@@ -225,7 +225,7 @@ const Homepage = () => {
                     <div className="second">Van Halen</div>
                   </div>
                 </div>
-                <div className="title">Full-Stack Web Developer (junior)</div>
+                <div className="title">Full-Stack Web Developer</div>
               </div>
               <div className="information">
                 <div className="column-one">
@@ -239,7 +239,7 @@ const Homepage = () => {
                   </div> */}
                   <div className="answer-bubble no-select" style={{marginBottom: "8px"}}>
                     <div className="relocate">Job Ready</div>
-                    <div className="message">I'm capable of deloping both front and back end</div>
+                    <div className="message">I'm stronger with front-end, but am well-versed in backend technologies as well.</div>
                   </div>
                   </div>
                 <div className="column-two">
@@ -331,7 +331,7 @@ const Homepage = () => {
               </div>
 
             </div>
-            <a href="https://docs.google.com/document/d/1tZMnRd4Kw5kS-U9jHRSON2SjnB1k7ny4/edit?usp=sharing&ouid=115538098538292968969&rtpof=true&sd=true" target="_" className="download-button no-select no-decoration">
+            <a href="https://drive.google.com/file/d/1GOQX4EUJopKd5wh2y9t21dFR3LI53q50/view?usp=sharing" target="_" className="download-button no-select no-decoration">
           Download CV
              </a>
              <div className="filler-div"></div>
