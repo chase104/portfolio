@@ -14,6 +14,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 
 import {NavigateNext} from '@material-ui/icons/';
 
+import profileImage from './images/Linkedin5Trans.png'
+
 
 const Homepage = () => {
   const [aboutTab, setAboutTab] = useState(true);
@@ -231,10 +233,10 @@ const Homepage = () => {
                   <div>Location</div>
                   <div>Email</div>
                   <div>Phone</div>
-                  <div className="answer-bubble no-select">
+                  {/* <div className="answer-bubble no-select">
                     <div className="relocate">Can Relocate</div>
                     <div className="message">I'm open to moving to most states to join your company</div>
-                  </div>
+                  </div> */}
                   <div className="answer-bubble no-select" style={{marginBottom: "8px"}}>
                     <div className="relocate">Job Ready</div>
                     <div className="message">I'm capable of deloping both front and back end</div>
@@ -242,7 +244,7 @@ const Homepage = () => {
                   </div>
                 <div className="column-two">
                   <div className="answers">
-                    <div>26</div>
+                    <div>27</div>
                     <div>Houston, TX</div>
                     <div>chase.vanhalen88@gmail.com</div>
                     <div>+1 317-480-6992</div>
@@ -339,6 +341,8 @@ const Homepage = () => {
       <div className="bottom-half">
 
       </div>
+      {/* <div className='image-container'></div>
+      <img src={profileImage}/> */}
     </div>
   )
 }
